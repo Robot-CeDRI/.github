@@ -1,50 +1,25 @@
 <h1 align="center">🔬💻 Robô CeDRI 2024 👾📟</h1>
 
+## Robot Deploy
 
-## README Contents:
-- [Sync a folder from our repository](#sync-a-folder-from-our-repository)
-- [Hardware Setup](#hardware-setup)
-- [Navigation](#navigation)
-- [Rasa Chatbot](#rasa-chatbot)
-- [Facial recognition](#facial-recognition)
-- [Interface](#interface)
-- [Artificial intelligence](#artificial-intelligence)
-- Speech recognition
-- Speech generation
+> The Robot version is linked to the main branch of the repositories, please be aware of just putting production code in it.
+
+## Respository Nomenclature
+
+At the start of the repository name the following letters means that the repository is from a specific robot functionality.
+
+- c_ => Conversation Repositories
+- m_ => Moviment Respositories
+- i_ => Interface Repositories
+
+## Project Repositories:
+- [Rasa](https://github.com/Robot-CeDRI/c_chatbot_rasa)
+- [LLM-API](https://github.com/Robot-CeDRI/c_llm_api)
+- [LLM-FineTuning](https://github.com/Robot-CeDRI/c_llm_fine_tuning)
+- [LLM-CedrinhoModel](https://github.com/Robot-CeDRI/c_cedrinho_llm_model)
+- [Facial recognition]()
+- [Robot Interface](https://github.com/Robot-CeDRI/i_robot_interface)
 ___
-# Sync a folder from our repository
-
-Step #1: Initialize the Repository
-Create a folder where you want to sync your git repo folder and Initialize git
-```bash
-mkdir tmp && cd tmp && git init
-```
-
-Step #2: Add the Remote Repository
-Add the remote Git repository with this local git repo as below -
-```bash
-git remote add origin ssh://git@gitlab.estig.ipb.pt:4589/paulo_leitao/robo_cedri_2023.git
-```
-
-Step #4: Enable the Sparse Checkout Properties
-Now, we have to enable the Sparse checkout properties and adding the folder name (in our case — ‘any’) in property file which we want to sync.
-```bash
-git config core.sparsecheckout true
-
-echo any/ >> .git/info/sparse-checkout
-```
-
-Step #5: Pull the Specific Folder
-This is the last step where we pull the specific folder as below -
-```bash
-git pull origin main
-```
-
-Step #6: List and work with synced directory
-```bash
-ls -la && cd any
-```
----
 # Hardware Setup
 Equipment and devices used to build the robot:
 - Jetson Orin nano 8GB: responsible for processing data related to user interaction, such as chatbot, artificial intelligence and interface.
